@@ -8,3 +8,4 @@ Script 6 adds execute permission to the owner and the group owner, and read perm
 Script 7 adds execution permission to the owner, the group owner and the other users, to a file
 script that sets the permissions to a file
 Script 9 sets the mode of the file hello
+Script 10 mirrors permissions

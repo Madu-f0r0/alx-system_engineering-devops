@@ -9,3 +9,4 @@ Script 7 adds execution permission to the owner, the group owner and the other u
 script that sets the permissions to a file
 Script 9 sets the mode of the file hello
 Script 10 mirrors permissions
+Script 11 adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users

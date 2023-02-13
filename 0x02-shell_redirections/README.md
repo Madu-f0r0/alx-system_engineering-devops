@@ -2,3 +2,4 @@ This readme explains the results of the 0x02. Shell, I/O Redirections and filter
 - Script 0 prints “Hello, World”, followed by a new line to the standard output.
 - Script 1 displays a confused smiley "(Ôo)'.
 - Script 2 displays the content of the /etc/passwd file.
+- Script 3 displays the content of /etc/passwd and /etc/hosts

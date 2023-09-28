@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script displays the contents of the current directory
+
+LIST=$(ls)
+
+for file in $LIST;
+do
+	echo "${file#*-}"
+done

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script displays iterates 10 times using a while loop
+#+ On the 4th iteration, "bad luck" is displayed
+#+ On the 8th iteration, "good luck" is displayed
+#+ On other iterations "Best School" is displayed
+
+
+i=0
+while ((i < 10))
+do
+	if ((i == 3))
+	then
+		echo "bad luck"
+	elif ((i == 7))
+	then
+		echo "good luck"
+	else
+		echo "Bad School"
+	fi
+	((i++))
+done

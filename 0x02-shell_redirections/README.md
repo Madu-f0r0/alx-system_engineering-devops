@@ -39,12 +39,24 @@ I used the above commands to write bash scripts to perform the functions as desc
 - [20-hiago](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/20-hiago) removes all letters `c` and `C` from an input
 - [21-reverse](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/21-reverse) reverses an input string passed to it
 - [22-users_and_homes](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/22-users_and_homes) displays all users and their home directories, sorted by users. Recieves its input from the `/etc/passwd/` file
-- [100-empty_casks](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/100-empty_casks) finds all empty files and directories in the current directory and all sub-directories
+
+## Advanced Scripts ##
+
+- [100-empty_casks](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/100-empty_casks) finds all empty files and directories in the current directory and all sub-directories.
 	* Only the names of the files and directories should be displayed (not the entire path)
 	* Hidden files should be listed
 	* One file name per line
 	* The listing should end with a new line
 	* `basename`, `grep`, `egrep`, `fgrep` or `rgrep` are not allowed for this task
 
-### Author ###
+- [101-gifs](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/101-gifs) lists all the files with a `.gif` extension in the current directory and all its sub-directories.
+	* Hidden files should be listed
+	* Only regular files (not directories) should be listed
+	* The names of the files should be displayed without their extensions
+	* The files should be sorted by byte values, but case-insensitive
+	* One file name per line
+	* The listing should end with a new line
+	* `basename`, `grep`, `egrep`, `fgrep`, and `rgrep` are not allowed for this script
+
+## Author ##
 Daniel Herbert

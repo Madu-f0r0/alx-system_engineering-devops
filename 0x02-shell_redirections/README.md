@@ -56,10 +56,10 @@ I used the above commands to write bash scripts to perform the functions as desc
 	* The files should be sorted by byte values, but case-insensitive
 	* One file name per line
 	* The listing should end with a new line
-	* `grep`, `egrep`, `fgrep`, and `rgrep` are not allowed for this script
+	* `basename`, `grep`, `egrep`, `fgrep`, and `rgrep` are not allowed for this script
 
 - [102-acrostic](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/102-acrostic) decodes an acrostic string input passed to it.	
-	* `basename`, `grep`, `egrep`, `fgrep`, and `rgrep` are not allowed for this script
+	* `grep`, `egrep`, `fgrep`, and `rgrep` are not allowed for this script
 
 - [103-the_biggest_fan](https://github.com/Madu-f0r0/alx-system_engineering-devops/blob/master/0x02-shell_redirections/103-the_biggest_fan) parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
 	* Order by number of requests, most active host or IP at the top

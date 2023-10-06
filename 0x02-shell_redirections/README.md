@@ -1,4 +1,4 @@
-### 0x02. Shell, I/O Redirections and filters project ###
+# 0x02. Shell, I/O Redirections and filters project #
 This project is an introduction to the Linux concept of input/output redirections across files using different Linux commands. The commands introduced or used in more depth in this project are: 
 - `echo`
 - `cat`
@@ -46,5 +46,5 @@ I used the above commands to write bash scripts to perform the functions as desc
 	* The listing should end with a new line
 	* `basename`, `grep`, `egrep`, `fgrep` or `rgrep` are not allowed for this task
 
-# Author #
+### Author ###
 Daniel Herbert

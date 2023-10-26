@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ifconfig | grep "inet" | awk '{print $2}'

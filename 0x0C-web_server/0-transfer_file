@@ -15,7 +15,7 @@ destination="~/"
 if [ "$#" -eq 4 ]
 then
 	ssh_key_path=$4
-	scp -o StrictHostKeyChecking="off" -i "$file_path" "$username"@"$ip":"$destination" "$ssh_key_path"
+	scp -o StrictHostKeyChecking="off" -i "$ssh_key_path" "$username"@"$ip":"$destination" "$file_path"
 else
 	scp -o StrictHostKeyChecking="off" "$file_path" "$username"@"$ip":"$destination"
 fi

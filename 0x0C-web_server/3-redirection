@@ -1,22 +1,11 @@
 #!/usr/bin/env bash
-#Creates a permanent redirection for `/redirect_me`
+# Configures URI permanent redirection
 
-sudo apt update
-sudo apt install -y nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
-# Create a new Nginx configuration file for redirection
-echo "server {
-    listen 80;
-    server_name localhost;
-
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-    }
-
-    # Additional server configurations go here
-}" | sudo tee /etc/nginx/sites-available/redirect_me
-
-# Create a symbolic link to enable the site
-sudo ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled
+file="/etc/nginx/sites-available/default"
+new_string=$"server_name _;\n\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/github.com\/Madu-f0r0;\n\t}"
+sed -i "s/server_name _;/$new_string/" $file
 
 sudo service nginx start

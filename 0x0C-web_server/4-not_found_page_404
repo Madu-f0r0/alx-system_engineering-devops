@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Creates a custom 404 page
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+file="/etc/nginx/sites-available/default"
+new_string=$"server_name _;\n\n\trewrite ^\/redirect_me https:\/\/github.com\/Madu-f0r0 permanent;\n\terror_page 404 /error_404.html;\n\tlocation \/404 {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sed -i "s/server_name _;/$new_string/" $file
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error_404.html 
+
+sudo service nginx restart

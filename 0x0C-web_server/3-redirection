@@ -3,6 +3,7 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee "/var/www/html/index.nginx-debian.html"
 
 file="/etc/nginx/sites-available/default"
 new_string=$"server_name _;\n\n\trewrite ^\/redirect_me https:\/\/github.com\/Madu-f0r0 permanent;"

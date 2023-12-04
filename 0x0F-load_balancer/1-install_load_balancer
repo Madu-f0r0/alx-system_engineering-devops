@@ -7,14 +7,14 @@ apt-get -y install haproxy
 
 echo '
 frontend http_front
-	bind *:80
+	bind 0:80
 	mode http
 	default_backend http_back
 
 backend http_back
 	balance roundrobin
-	server 249607-web-01 100.24.72.83 check
-	server 249607-web-02 100.25.162.168 check
+	server 249607-web-01 100.24.72.83
+	server 249607-web-02 100.25.162.168
 ' >> /etc/haproxy/haproxy.cfg
 
 service haproxy restart

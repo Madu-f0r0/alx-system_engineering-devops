@@ -2,11 +2,11 @@
 # Installs and configures an Ubuntu machine
 
 # Install Nginx
-sudo apt-get -y update
-sudo apt-get -y install nginx
+apt-get -y update
+apt-get -y install nginx
 
 # Modify landing page
-echo "Hello World!" | sudo tee "/var/www/html/index.nginx-debian.html"
+echo "Hello World!" > "/var/www/html/index.nginx-debian.html"
 
 # Config file path to add 301 redirection and 404 error directives
 file="/etc/nginx/sites-available/default"
@@ -15,15 +15,14 @@ file="/etc/nginx/sites-available/default"
 new_string="server_name _;\n\n\trewrite ^/redirect_me https://github.com/Madu-f0r0 permanent;\n\n\terror_page 404 /error_404.html;"
 
 # Directive to add custom response header to identify backend server
-add_header="include /etc/nginx/sites-enabled/\*;\n\n\t#Extra Header\n\tadd_header \"X-Served-By\" \$HOSTNAME always;"
-replace="include /etc/nginx/sites-enabled/\*;"
+add_header="server_name _;\n\n\t#Extra Header\n\tadd_header \"X-Served-By\" \$HOSTNAME always;"
 
 # In-file modifications of config files specified
 sed -i "s|server_name _;|$new_string|" $file
-sed -i "s|$replace|$add_header|" "/etc/nginx/nginx.conf"
+sed -i "s|server_name _;|$add_header|" $file
 
 # Create and modify custom 404 error page
-echo "Ceci n'est pas une page" | sudo tee "/var/www/html/error_404.html"
+echo "Ceci n'est pas une page" > "/var/www/html/error_404.html"
 
 # Start or restart Nginx to initiate config file modifications
-sudo service nginx start
+service nginx start

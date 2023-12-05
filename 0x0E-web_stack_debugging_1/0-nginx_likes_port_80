@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Debug Nginx
+
+apt-get -y update
+apt-get -y install curl
+apt-get -y install nginx
+service nginx start

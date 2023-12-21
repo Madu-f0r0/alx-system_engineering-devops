@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 # runs Nginx as the nginx user
 
 pkill apache2

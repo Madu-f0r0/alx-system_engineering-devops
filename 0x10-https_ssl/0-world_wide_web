@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Displays the record type of a subdomain
+
+all_d_record_types()
+{
+	subdomains=("www" "lb-01" "web-01" "web-02")
+	for sd in "${subdomains[@]}";
+	do
+		host_name="$sd.$1"
+		dig "$host_name" | awk "(\$1==\"$host_name.\") {print \"The subdomain \" \"$sd\" \" is a \" \$4 \" record and points to \" \$5 }"
+	done
+}
+
+sd_record_type()
+{
+	host_name="$2.$1"
+	sd="$2"
+	dig "$host_name" | awk "(\$1==\"$host_name.\") {print \"The subdomain \" \"$sd\" \" is a \" \$4 \" record and points to \" \$5 }"
+}
+
+if [ $# -eq 2 ];
+then
+	sd_record_type "$1" "$2"
+elif [ $# -eq 1 ];
+then
+	all_d_record_types "$1"
+fi

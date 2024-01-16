@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" This module contains a function that returns the number of
+"""
+This module contains a function that returns the number of
 subscribers for a given subreddit
 """
 
@@ -7,7 +8,8 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """ Returns the number of subscribers for  given subreddit.
+    """
+    Returns the number of subscribers for  given subreddit.
 
     subreddit: (string) - the subreddit to be queried
 

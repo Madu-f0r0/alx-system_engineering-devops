@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains a function that prints the tites of the
+This module contains a function that prints the titles of the
 top 10 hottest posts for a specified subreddit
 """
 
@@ -15,11 +15,12 @@ def top_ten(subreddit):
     """
 
     if subreddit is not None and type(subreddit) is str:
-        url = "http://reddit.com/r/{}/hot.json".format(subreddit)
+        url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
         headers = {"User-Agent": "api-practice (by /u/madu-foro)"}
         params = {"limit": 10}
 
-        reddit_resp = requests.get(url, params=params, headers=headers).json()
+        reddit_resp = requests.get(url, params=params, headers=headers,
+                                   allow_redirects=False).json()
 
         reddit_response_data = reddit_resp.get("data", {})
 

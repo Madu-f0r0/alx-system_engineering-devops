@@ -18,10 +18,11 @@ def number_of_subscribers(subreddit):
     """
     if subreddit is None or type(subreddit) is not str:
         return 0
-    url = "http://www.reddit.com/r/{}/about.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {"User-Agent": "api-practice (by /u/madu-foro)"}
 
-    reddit_response = requests.get(url, headers=headers).json()
+    reddit_response = requests.get(url, headers=headers,
+                                   allow_redirects=False).json()
 
     subscribers = reddit_response.get("data", {}).get("subscribers", 0)
     return subscribers

@@ -27,8 +27,7 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     after = reddit_response_data.get("after")
     count += reddit_response_data.get("dist")
 
-    children = reddit_response_data.get("children")
-    for entry in children:
+    for entry in reddit_response_data.get("children"):
         hot_list.append(entry.get("data").get("title"))
 
     if after is not None:
